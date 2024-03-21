@@ -22,16 +22,17 @@ import { student } from './student/student.entity';
 import { StudentUpdateDTO } from './student/dto/studentUpdate.dto';
 import { ClassroomController } from './classroom/classroom.controller';
 import { ClassroomService } from './classroom/classroom.service';
+import { number } from 'yargs';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'cornelius.db.elephantsql.com',
+      host: process.env.HOST,
       port: 5432,
-      username: 'aiomqkhi',
-      password: 'dCsNMk1RlJqsy59eB7vcSff9AcbVxVhh',
-      database: 'aiomqkhi',
+      username: process.env.USERNAME,
+      password: process.env.PASSWORD,
+      database: process.env.DATABASE,
       entities: [ong, workshop, category, student, StudentUpdateDTO],
       synchronize: false, 
     }), OngModule, WorkshopModule, ClassroomModule, StudentModule, CategoryModule, UserModule, PresenceModule, ClassModule, TeacherModule],

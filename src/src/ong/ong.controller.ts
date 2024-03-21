@@ -1,7 +1,7 @@
 // Importa decoradores, entidade de ONG e serviço de workshop
 import { Controller, Get, Param } from "@nestjs/common";
 import { OngService } from "./ong.service";
-import { WorkshopService } from "src/workshop/workshop.service";
+import { WorkshopService } from "../workshop/workshop.service";
 
 
 @Controller('/ongs')

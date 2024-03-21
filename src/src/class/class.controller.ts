@@ -2,7 +2,7 @@
 import { Controller, Post, Get, Body } from '@nestjs/common';
 import { ClassService } from './class.service';
 import { ClassDTO } from './class.dto';
-import { PresenceEntity } from 'src/presence/presence.entity'; // Certifique-se de importar a entidade de presença
+import { PresenceEntity } from '../presence/presence.entity'; // Certifique-se de importar a entidade de presença
 
 @Controller('class')
 export class ClassController {

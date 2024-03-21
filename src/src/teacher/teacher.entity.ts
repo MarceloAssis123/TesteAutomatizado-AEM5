@@ -1,5 +1,5 @@
 // Importa a entidade de ONG e de Workshop
-import { ong } from "src/ong/ong.entity";
+import { ong } from "../ong/ong.entity";
 import { Column, Entity, PrimaryGeneratedColumn, Timestamp } from "typeorm";
 
 @Entity({name: 'teacher'})

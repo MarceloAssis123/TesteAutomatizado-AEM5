@@ -32,7 +32,10 @@ export class UserService {
     async authCreditialsUser(authCredentialsUser: AuthCredentialsUser): Promise<User | undefined>{
         const query = `SELECT * FROM appuser WHERE email = $1 and password = $2`
         const result = await this.usersRepository.query(query, [authCredentialsUser.email, authCredentialsUser.password])
-        return result[0] || null
+        if (result){
+            return result[0]
+        }
+        return null
     }
 
 }

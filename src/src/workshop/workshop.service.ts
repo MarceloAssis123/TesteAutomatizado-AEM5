@@ -1,7 +1,7 @@
 import { InjectEntityManager, InjectRepository } from "@nestjs/typeorm";
 import { Injectable } from '@nestjs/common';
 import { workshop } from "./workshop.entity";
-import { StudentDTO } from "src/student/dto/student.dto";
+import { StudentDTO } from "../student/dto/student.dto";
 import { Repository } from 'typeorm';
 import { EntityManager } from "typeorm";
 

@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { ClassEntity } from './class.entity';
 import { ClassDTO } from './class.dto';
-import { PresenceService } from 'src/presence/presence.service';
-import { PresenceEntity } from 'src/presence/presence.entity';
+import { PresenceService } from '../presence/presence.service';
+import { PresenceEntity } from '../presence/presence.entity';
 
 @Injectable()
 export class ClassService {

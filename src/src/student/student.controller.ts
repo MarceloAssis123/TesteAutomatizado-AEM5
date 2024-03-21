@@ -3,7 +3,7 @@ import { Controller, Post, Body, Put, Patch, Param, Delete } from "@nestjs/commo
 import { StudentService } from "./student.service";
 import { StudentDTO } from "./dto/student.dto";
 import { student } from "./student.entity";
-import { WorkshopService } from "src/workshop/workshop.service";
+import { WorkshopService } from "../workshop/workshop.service";
 import { StudentUpdateDTO } from "./dto/studentUpdate.dto";
 import { StudentCreateDTO } from "./dto/studentCreate.dto";
 

@@ -1,6 +1,6 @@
 // Importa a entidade de ONG e de Workshop
-import { workshop } from "src/workshop/workshop.entity";
-import { ong } from "src/ong/ong.entity";
+import { workshop } from "../workshop/workshop.entity";
+import { ong } from "../ong/ong.entity";
 
 // DTO de professor
 

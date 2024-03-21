@@ -31,7 +31,7 @@ describe('UserController (e2e)', () => {
     });
 
     describe('Auth', () => {
-        it('(Erro) deve retornar NULL', async () => {
+        it('(Erro) deve retornar uma chave vazia', async () => {
             const userCredentials = { "email": "a@gmail.com", "password": "falso" }
 
             const testeErro = await request(app.getHttpServer())

@@ -22,17 +22,19 @@ import { student } from './student/student.entity';
 import { StudentUpdateDTO } from './student/dto/studentUpdate.dto';
 import { ClassroomController } from './classroom/classroom.controller';
 import { ClassroomService } from './classroom/classroom.service';
-import { number } from 'yargs';
+import * as dotenv from 'dotenv'
+dotenv.config();
+
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: process.env.HOST,
+      host: process.env.HOST_DB,
       port: 5432,
-      username: process.env.USERNAME,
-      password: process.env.PASSWORD,
-      database: process.env.DATABASE,
+      username: process.env.USERNAME_DB,
+      password: process.env.PASSWORD_DB,
+      database: process.env.DATABASE_DB,
       entities: [ong, workshop, category, student, StudentUpdateDTO],
       synchronize: false, 
     }), OngModule, WorkshopModule, ClassroomModule, StudentModule, CategoryModule, UserModule, PresenceModule, ClassModule, TeacherModule],

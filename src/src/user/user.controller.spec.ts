@@ -17,8 +17,8 @@ describe('UserController (e2e)', () => {
 
     describe('Auth', () => {
         it('(Sucesso) deve retornar o usuário', async () => {
-            const userCredentials = { "email": "lider1@gmail.com", "password": "teste" }
-            const responseBody = { 'id': 1, 'role': 'Leader', 'ongid': 1, 'teacherid': null, "email": "lider1@gmail.com", "password": "teste" }
+            const userCredentials = { "email": process.env.EMAIL_LOGIN_TEST, "password": process.env.PASSWORD_LOGIN_TEST }
+            const responseBody = { 'id': 1, 'role': 'Leader', 'ongid': 1, 'teacherid': null, "email": process.env.EMAIL_LOGIN_TEST, "password": process.env.PASSWORD_LOGIN_TEST }
 
             const testeSucesso = await request(app.getHttpServer())
                 .post('/user/auth')
@@ -32,7 +32,7 @@ describe('UserController (e2e)', () => {
 
     describe('Auth', () => {
         it('(Erro) deve retornar NULL', async () => {
-            const userCredentials = { "email": "a@gmail.com", "password": "123" }
+            const userCredentials = { "email": "a@gmail.com", "password": "falso" }
 
             const testeErro = await request(app.getHttpServer())
                 .post('/user/auth')
